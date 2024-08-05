@@ -1,0 +1,8 @@
+.code-cell {
+	display: flex;
+	height: 100%;
+}
+.code-editor {
+	height: 100%;
+	width: calc(100% - 10px);
+}

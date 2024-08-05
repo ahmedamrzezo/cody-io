@@ -1,0 +1,8 @@
+button {
+	background-color: #0076a5;
+	color: white;
+	border: none;
+	min-height: 30px;
+	padding: 5px 10px;
+	margin-inline-start: 10px;
+}
