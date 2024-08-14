@@ -59,6 +59,29 @@ const cellsReducers = produce((state: CellsReducerState = initialState, action: 
 			state.order.splice(index, 0, newCell.id);
 			return state;
 		}
+		case ActionTypes.FetchCells: {
+			state.loading = true;
+			return state;
+		}
+		case ActionTypes.FetchCellsSuccess: {
+			state.loading = false;
+			state.order = [];
+			state.data = action.payload.reduce((acc, cell) => {
+				acc[cell.id] = cell;
+				state.order.push(cell.id);
+				return acc;
+			}, {} as { [k: string]: Cell; });
+			return state;
+		}
+		case ActionTypes.FetchCellsFailure: {
+			state.loading = false;
+			state.error = action.payload;
+			return state;
+		}
+		case ActionTypes.SaveCellsFailure: {
+			state.error = action.payload;
+			return state;
+		}
 		default: {
 			return state;
 		}

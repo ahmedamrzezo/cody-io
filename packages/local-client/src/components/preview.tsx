@@ -3,6 +3,7 @@ import './preview.css';
 
 interface PreviewProps {
 	code: string;
+	err: string | null;
 }
 
 const html = `
@@ -33,7 +34,7 @@ const html = `
 		</body>
 	</html>`;
 
-const Preview: React.FC<PreviewProps> = ({ code }: PreviewProps) => {
+const Preview: React.FC<PreviewProps> = ({ code, err }: PreviewProps) => {
 	const iframeRef = useRef<any>(null);
 
 	useEffect(() => {
@@ -51,6 +52,7 @@ const Preview: React.FC<PreviewProps> = ({ code }: PreviewProps) => {
 				sandbox="allow-scripts"
 				srcDoc={html}
 			/>
+			{err && <div className="preview-error">{err}</div>}
 		</div>
 	);
 };

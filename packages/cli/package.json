@@ -1,0 +1,29 @@
+{
+  "name": "cody-io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV='production' --external:node:events --external:node:child_process --external:node:path --external:node:fs --external:node:process"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "bin": "dist/index.js",
+  "dependencies": {
+    "@cody-io/local-client": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "esbuild": "0.8.26",
+    "typescript": "^5.5.4",
+    "@cody-io/local-api": "^1.0.0",
+    "commander": "^12.1.0"
+  }
+}

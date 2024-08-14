@@ -36,13 +36,13 @@ const CodeCell = ({ cell }: CodeCellProps) => {
 			<div className="code-cell">
 				<Resizable direction="horizontal">
 					<div className="code-editor">
-						<CodeEditor onChange={(value) => updateCell(cell.id, value)} />
+						<CodeEditor value={cell.content} onChange={(value) => updateCell(cell.id, value)} />
 					</div>
 				</Resizable>
 				{!bundle || bundle.loading ? (
 					<Loading />
 				) : (
-					<Preview code={bundle.code} />
+					<Preview code={bundle.code} err={bundle.error} />
 				)}
 			</div>
 		</Resizable>

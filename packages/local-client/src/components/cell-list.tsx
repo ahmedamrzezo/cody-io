@@ -1,4 +1,5 @@
-import React from 'react';
+import { useEffect } from 'react';
+import useActions from '../hooks/use-actions';
 import useTypedSelector from '../hooks/use-typed-selector';
 import AddCell from './add-cell';
 import CellListItem from './cell-list-item';
@@ -7,6 +8,13 @@ const CellList = () => {
 	const cells = useTypedSelector(({ cells }) =>
 		cells.order.map((id) => cells.data[id]),
 	);
+
+	const { fetchCells, saveCells } = useActions();
+
+	useEffect(() => {
+		fetchCells();
+	}, []);
+
 	return (
 		<>
 			<div className="cell-list">
