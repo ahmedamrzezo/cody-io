@@ -1,6 +1,6 @@
 {
   "name": "@cody-io/local-client",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "publishConfig": {
     "access": "public"
   },

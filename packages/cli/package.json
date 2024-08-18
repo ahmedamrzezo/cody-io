@@ -1,6 +1,6 @@
 {
   "name": "cody-io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
@@ -20,7 +20,7 @@
     "@cody-io/local-client": "^1.0.0"
   },
   "devDependencies": {
-    "@cody-io/local-api": "^1.0.0",
+    "@cody-io/local-api": "^1.1.0",
     "@types/node": "^22.3.0",
     "commander": "^12.1.0",
     "esbuild": "0.8.26",
