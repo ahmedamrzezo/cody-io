@@ -22,8 +22,9 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@cody-io/local-client": "^1.0.0",
     "express": "^4.19.2",
-    "http-proxy-middleware": "^3.0.0",
-    "@cody-io/local-client": "^0.1.0"
-  }
+    "http-proxy-middleware": "^3.0.0"
+  },
+  "gitHead": "7d18de24d7783b36dd4a9d52357374a03cd1b96f"
 }
