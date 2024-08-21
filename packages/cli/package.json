@@ -1,6 +1,6 @@
 {
   "name": "cody-io",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "a tool for developers who want to write down some code ideas or code snippets for further reference, something like a notebook for developer.",
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
@@ -17,10 +17,10 @@
   ],
   "bin": "dist/index.js",
   "dependencies": {
-    "@cody-io/local-client": "^1.2.0"
+    "@cody-io/local-client": "^1.2.2"
   },
   "devDependencies": {
-    "@cody-io/local-api": "^1.2.0",
+    "@cody-io/local-api": "^1.2.2",
     "@types/node": "^22.3.0",
     "commander": "^12.1.0",
     "esbuild": "0.8.26",

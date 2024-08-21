@@ -1,6 +1,6 @@
 {
   "name": "@cody-io/local-api",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@cody-io/local-client": "^1.2.0",
+    "@cody-io/local-client": "^1.2.2",
     "express": "^4.19.2",
     "http-proxy-middleware": "^3.0.0"
   },
