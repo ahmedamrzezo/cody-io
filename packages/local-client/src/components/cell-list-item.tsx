@@ -11,11 +11,15 @@ const CellListItem = ({ cell }: CellListItemProps) => {
 	return (
 		<div className="cell-list-item">
 			<style>
-				{`.cell-list-item {
-							padding	: 10px;
-							border-bottom: 1px solid #333;
-						}
-						`}
+				{`
+					.cell-list-item {
+						padding	: 10px;
+						border-bottom: 1px solid #333;
+					}
+					.cell-list-item:hover .action-bar{
+						opacity: 1;
+					}
+				`}
 			</style>
 			<ActionBar id={cell.id} />
 			{cell.type === 'markdown' && <TextEditor cell={cell} />}

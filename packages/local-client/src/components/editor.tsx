@@ -70,7 +70,11 @@ const CodeEditor = ({
 			}
 			`}
 			</style>
-			<button type="button" className="format-button" onClick={formatCode}>
+			<button
+				title="Format code"
+				type="button"
+				className="format-button"
+				onClick={formatCode}>
 				<i className="fas fa-broom"></i>
 			</button>
 			<MonacoEditor

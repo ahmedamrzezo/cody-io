@@ -13,6 +13,9 @@ const ActionBar = ({ id }: ActionBarProps) => {
 						height: 30px;
 						display: flex;
 						justify-content: end;
+						opacity: 0;
+						transition: opacity 0.2s;
+						transition-delay: 0.3s;
         }
         `;
 
